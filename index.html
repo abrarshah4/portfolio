@@ -1,0 +1,765 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mohd Abrar Shah</title>
+    <style>
+
+@import url('https://fonts.googleapis.com/css?family=Lato|Montserrat|Pacifico|Quicksand|Racing+Sans+One|Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Cookie&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Anton&display=swap');
+:root{
+    --primary-color:#000000;
+    --secondary-color:#eee;
+    --highlight-color:#fc2e64;
+} 
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    background:var(--primary-color);
+    clip-path: polygon(50% 0, 100% 0, 100% 80%, 50% 100%, 0 80%, 0 0);
+    color: #eee;
+    position: relative;
+}
+
+.logo{
+    position: absolute;
+    top: 2vh;
+    left: 2%;
+}
+
+
+.header__flex{
+    height: 100vh;
+    flex-wrap: wrap-reverse;
+}
+
+
+
+.primary_heading__1{
+    font-family: 'Pacifico', cursive;
+    font-weight: 200;
+}
+
+.primary_heading__2{
+    font-weight: bolder;
+    font-family: 'Roboto', sans-serif;
+    letter-spacing: 2px;
+    
+}
+
+.primary_heading__2 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+
+
+.primary_heading__2:hover{
+    animation-play-state: paused;
+}
+
+
+@keyframes stoking{
+    0%,100%{transform: translateX(0);}
+    50%{
+        -webkit-text-stroke-width: .6px;
+        -webkit-text-stroke-color: rgba(255, 0, 0, 0.623);
+        transform:translateX(2px);
+    }
+}
+
+.primary_heading__3{
+    display: inline-block;
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.primary_heading__4{
+    font-weight: 300;
+    font-size: 1rem;
+}
+
+.developer__pic{
+    width: 550px;
+    overflow: hidden;
+}
+
+.socail__media{
+   
+    position: absolute;
+    bottom: 10vh;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.socail__media_link{
+    color: var(--secondary-color);
+}
+
+.socail__media_link:not(:first-child){
+    margin-left: 10px;
+    transition: all .4s;
+}
+
+.socail__media_link:hover{
+    animation: icon3d 200ms infinite;
+}
+@keyframes icon3d {
+  0% {
+    text-shadow: 5px 4px rgba(244,67,54,1), -5px -6px rgba(33,150,243,1);
+  }
+  25% {
+    text-shadow: -5px -6px rgba(244,67,54,1), 5px 4px rgba(33,150,243,1);
+  }
+  50% {
+    text-shadow: 5px -4px rgba(244,67,54,1), -8px 4px rgba(33,150,243,1);
+  }
+  75% {
+    text-shadow: -8px -4px rgba(244,67,54,1), -5px -4px rgba(33,150,243,1);
+  }
+  100% {
+    text-shadow: -5px 0 rgba(244,67,54,1), 5px -4px rgba(33,150,243,1);
+  }
+}
+
+
+
+.about{
+    margin-top: -20rem;
+    padding: 25rem 0 6rem 0;
+    background: var(--secondary-color);
+}
+
+.about_heading{
+    color: var(--secondary-color);
+    display: inline-block;
+}
+
+.about_discrption{
+    padding: 0 6rem;
+}
+
+.resume{
+    text-decoration: none;
+    padding: .3rem 1rem;
+    letter-spacing: 1px;
+    background: var(--highlight-color);
+    color: #eee;
+    box-shadow: rgba(204, 194, 194, 0.329) -1px 1px 0,
+    rgba(204, 194, 194, 0.329) -3px 3px 0,
+    rgba(204, 194, 194, 0.329) -4px 4px 0,
+    rgba(204, 194, 194, 0.329) -5px 5px 0,
+    rgba(204, 194, 194, 0.329) -6px 6px 0,
+    rgba(204, 194, 194, 0.329) -7px 7px 0;
+    font-weight: bold;
+}
+
+
+.skill_container{
+    flex-wrap: wrap;
+    padding:  1rem 0;
+}
+
+.skill__items{
+margin-bottom: 1rem;
+}
+.skill_heading{
+  text-decoration: underline;
+  font-size: 1.3rem;
+  color: rgba(0, 0, 0, .6)
+}
+
+.skills_polygon{
+    text-align: center;
+    line-height: 108px;
+    width: 100px;
+    height: 108px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: rgba(0, 0, 0, .2);
+    color: var(--primary-color);
+    position: relative;
+    transition: all .3s;
+}
+.skills_polygon::after{
+    position: absolute;
+    content: '';
+    top:-1px;
+    left: 0;
+    width: 100px;
+    height: 105px;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    z-index: -1;
+    background: rgba(0, 0, 0, .2);
+}
+
+.skills_polygon:hover{
+    cursor: pointer;
+    transform: translateY(-10px);
+}
+
+
+.some__creativity_text{
+    display: inline-block;
+    color: var(--secondary-color);
+    font-weight: bold;
+  
+
+}
+
+.some__memories{
+    background: var(--secondary-color);
+    padding-bottom: 6rem;
+}
+
+.pictures_grid{
+    padding: 2rem 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,350px);
+    grid-auto-rows: 190px;
+    justify-content: center;
+    align-items: stretch;
+  
+}
+
+.pictures__items{
+    overflow: hidden;
+    transition: all .3s;
+    position: relative;
+}
+
+
+.pictures__items:nth-child(1){
+    grid-column: 1/1;
+    grid-row: 1/3;
+}
+
+
+.pictures__items img{
+   width: 100%;
+}
+
+.more__pictures_btn{
+    display: inline-block;
+    color:var(--secondary-color);
+    transition: all .2s;
+}
+
+.more__pictures_btn:hover{
+    box-shadow: 0 1rem 1rem rgba(58, 58, 58,.2);
+    transform: skew(0) scale(1.2);
+}
+
+footer{
+    padding: 1rem 0;
+    background: var(--primary-color);
+    color: var(--secondary-color);
+}
+
+.copyright__text__1{
+    display: inline-block;
+    font-size: 10px;
+}
+
+
+
+
+  
+footer i{
+    animation: heartBeat 1s infinite;
+}
+
+
+@-webkit-keyframes heartBeat {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    14% {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  
+    28% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+  
+    42% {
+      -webkit-transform: scale(1.3);
+      transform: scale(1.3);
+    }
+  
+    70% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+    }
+}
+
+
+.projects{
+    background: var(--primary-color);
+    padding: 4rem 0;
+    position: relative;
+}
+
+.project_heading {
+    display: inline-block;
+    position: absolute;
+    top: -1.2rem;
+    left: 50%;
+    color: var(--secondary-color);
+    background: var(--highlight-color);
+    padding: 1rem;
+    transform:skew(-20deg) translateX(-50%);
+}
+
+.project__container{
+    flex-wrap: wrap;
+}
+
+.project_items{
+    width: 300px;
+    background: var(--secondary-color);
+    border-radius: 10px;
+    text-align: center;
+    color: var(--primary-color);
+    overflow: hidden;
+    margin: 1rem;
+    padding: 1rem;
+    transition: all.4s;
+    box-shadow: 0  0px 10px rgba(7, 7, 7, 0.363);
+    -webkit-tap-highlight-color: transparent;
+}
+
+
+.project_items:hover{
+    transform:translateY(-10px);
+    cursor: pointer;
+}
+
+
+
+.project_screen_shot{
+    width: 120%;
+    height: 200px;
+    background: #eee;
+    transform: translate(-2rem,-1rem);
+    clip-path: polygon(50% 0%, 99% 0, 100% 75%, 50% 100%, 0% 75%, 0 0);
+}
+
+.project_screen_shot img{
+    width: 100%;
+    height: 120%;
+    transform: translate(-2rem,-1rem);
+}
+
+.source_code_btn{
+    padding: .6rem;
+    background: var(--highlight-color);
+    display: inline-block;
+    transition: all .2s;
+    border-radius: 2px;
+    font-weight: bold;
+    color:var(--secondary-color);
+    -webkit-tap-highlight-color: transparent;
+}
+
+.source_code_btn:hover{
+        box-shadow: 0 1rem 2rem rgba(0, 0, 0,.3);
+        transform: rotate(5deg) scale(1.1);
+        cursor: pointer;
+}
+
+.project_title{
+    font-size: 1.2rem;
+}
+
+.project_discription{
+    font-family: 'Lato', cursive;
+    font-style:italic;
+}
+
+.project_screen_shot img{
+    width: 150%;
+    margin-left: -60px;
+}
+.project_more_text{
+    font-weight: bold;
+    padding-top: 2rem;
+    color: var(--secondary-color);
+}
+
+.github__link_btn{
+    font-weight: 200;
+    font-family: 'lato' sans-serif;
+    display:inline-block;
+    color: var(--secondary-color);
+}
+
+.github__link_btn:hover{
+  box-shadow: 0 1rem 1rem rgba(58, 58, 58,.6);
+  transform: rotate(-5deg) scale(1.2);
+}
+
+
+
+a{
+    text-decoration: none;
+}
+.flex__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.flex_item{
+    padding: 0 1rem;
+}
+ 
+.center-text{ text-align: center;}
+
+.skew{ 
+    background: #fc2e64;;
+    padding: .4rem 1rem;
+    transform: skew(-20deg);
+}
+
+.margin_bottom__4r{ margin-bottom: .5rem;}
+.margin_bottom__3r{ margin-bottom: 3rem;}
+.margin_bottom__2r{ margin-bottom: 2rem;}
+
+.margin_bt__2re{margin: 2rem 0;}
+.margin_bt__4re{margin: 4rem 0;}
+.small__margin{ margin: .8rem 0};
+
+
+
+
+@media only screen and (min-width: 1400px) {
+    .pictures_grid{
+        grid-template-columns:repeat(auto-fit,500px);
+        grid-auto-rows: 300px;
+    }
+} 
+
+
+@media only screen and (min-width: 1400px) {
+    .pictures_grid{
+        grid-template-columns:repeat(auto-fit,700px);
+        grid-auto-rows: 400px;
+    }
+} 
+
+
+
+@media only screen and (max-width:900px) {
+
+
+     header{
+        font-size: 60%;
+    } 
+
+    .developer__pic{
+        width: 300px;
+    }
+    
+}
+
+
+@media only screen and (max-width:640px){
+    
+    header{
+        height: 91vh;
+    }
+    
+    .header__flex{
+        height: 70vh;
+        flex-flow: column-reverse;
+    }
+
+    .developer__pic{
+        z-index: -1;
+    }
+
+    .heading_container{
+        margin-top: -50px;
+        text-align: center;
+    }
+
+    .primary_heading__1{
+        text-align: left;
+    }
+
+    .about_discrption{
+        padding: 0 2rem;
+    }
+
+   
+    .skills_polygon{
+        line-height: 78px;
+        width: 70px;
+        height: 78px;
+    }
+
+    
+    .skills_polygon::after{
+        width: 70px;
+        height: 75px;
+    }
+
+    .skills_polygon:hover{
+        cursor: pointer;
+         transform: translateY(-10px);
+    }
+
+    .photoshop__text{
+        font-size: 10px;
+    }
+
+    .project_more_text{
+      padding: 1rem;
+    }
+ 
+} 
+
+
+@media only screen and (max-width:320px){
+   
+    
+    .logo{
+        top: 16px;
+        left: 16px;
+    }
+
+    .logo__img{
+        width: 40px;
+    }
+
+    .project_heading{
+        top: 10px;
+        font-size: 100%;
+    }
+
+    .copyright__text{
+        font-size: 10px;
+        padding: 0 10px;
+    }
+
+    .pictures_grid{
+        grid-template-columns: repeat(auto-fit,316px); 
+    }
+
+    .pictures__items img{
+        height: 102%;
+    }
+
+
+
+}
+
+
+
+</style>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+</head>
+<body>
+    
+
+<header>
+    
+    <div class="flex__container header__flex">
+            <div class="flex_item heading_container">
+                    <h1 class="primary_heading__1 margin_bottom__4r">Welcome,</h1>
+                    <h1 class="primary_heading__2 margin_bottom__4r manofaction__name"> I'm Mohd Abrar Shah</h1>
+                    <h2 class="primary_heading__3 skew margin_bottom__4r"> Web Developer </h2>
+                    <h3 class="primary_heading__4">UI/UX Developer </h3>
+            </div>
+            
+            <div class="flex-item  developer__pic">
+                    <img src="https://www.designyourway.net/blog/wp-content/uploads/2018/12/programming-wallpaper3-700x525.jpg" width="100%">
+            </div>        
+    </div>
+
+    <div class="socail__media">
+        <a  class="socail__media_link" href=https://github.com/abrarshah4 target="click"> <i class="fa fa-github-square fa-2x" aria-hidden="true"></i></a>
+        <a  class="socail__media_link"  href=https://www.linkedin.com/in/abrar-shah-954408162/ target="click"> <i class="fa fa-linkedin-square fa-2x" aria-hidden="true"></i></a>
+        <a  class="socail__media_link" href=https://www.instagram.com/abhishaz4/ target="click"> <i class="fa fa-instagram fa-2x" aria-hidden="true"></i></a>
+        <a  class="socail__media_link"  href=https://www.facebook.com/khann.abrar.3/ target="click"> <i class="fa fa-facebook-square fa-2x" aria-hidden="true" target="_blank"></i></a>
+        <a  class="socail__media_link"  href=https://www.snapchat.com/abhishaz7/ target="click"> <i class="fa fa-snapchat-square fa-2x" aria-hidden="true"></i></a>
+    </div>
+   
+</header>
+
+
+<section class="about">
+        
+    <div class="center-text margin_bottom__4r">
+        <h1 class="about_heading skew">About me</h1>
+    </div>
+
+    <div class="about_discrption center-text margin_bt__4re">
+        <p class="about-developer-text">
+           <strong>Hey again, </strong> I am Mohd Abrar Shah from Srinagar KASHMIR.
+             I am a IT(<i> <strong> Information Technology</strong> </i>) student. 
+             <p>Completed Graduation in BCA (<i><strong>Bachelors Of Computer Application,From Islamia College Of Science And Commerce </strong></i>).
+                Currently doing MCA (<i><strong>Masters Of Computer Application,At Islamia Collage Of Science And Commerce</strong></i>)
+             I hate lot of thing and i don't particularly like anything.
+             What i have is not a dream because i will make it a reality.
+             My hobbies includes many things like Football,Photography📸,Camping and Travelling.</p>
+             
+     </div>
+   
+    <div class="center-text margin_bottom__2r">
+        <a class="resume" href=C:\Users\abrar\Desktop\workspace\pt\pt\Resume.pdf><i class="fa fa-cloud-download" aria-hidden="true"></i>&nbsp;Resume</a>
+    </div>
+
+    <div class="center-text">
+        <h1 class="skill_heading margin_bottom__3r">These Are My Skill</h1>
+    </div>
+
+<div class="flex__container skill_container">
+
+        <div class="flex_item skill__items">
+            <div class="skills_polygon">Java</div>
+        </div>
+        <div class="flex_item skill__items">
+            <div class="skills_polygon">C++</div>
+        </div>
+        <div class="flex_item skill__items">
+            <div class="skills_polygon">HTML</div>
+        </div>
+        <div class="flex_item skill__items">
+            <div class="skills_polygon">CSS</div>
+        </div>
+        <div class="flex_item skill__items">
+            <div class="skills_polygon">javascript</div>
+        </div>
+        <div class="flex_item skill__items">
+                <div class="skills_polygon">MS Office</div>
+         </div>
+      
+</div>
+
+</section>
+
+
+<section class="projects">
+
+        <div>
+                <h1 class="project_heading">My Projects</h1>
+        </div>
+
+        
+        <div class="flex__container project__container">
+           
+                <div  class="flex_item project_items ">
+                   <div class="project_screen_shot">    
+                       <img src="https://img.freepik.com/free-photo/black-friday-elements-assortment_23-2149074075.jpg?size=626&ext=jpg" alt="project screenshot">
+                   </div>
+                   <h1 class="project_title small__margin" >Shop Now</h1>
+                   <p class="project_discription small__margin">This site is related to world's best Shopping items Check Out .</p>
+                   <a href=file:///F:/Personal%20projects/shoe%20product%20page.html.html target="click" class="source_code_btn small__margin"> SeeMore ➞ </a>
+                </div>
+
+        </div>
+
+        <div class="center-text">
+           <p class="project_more_text">These are only some of my projects!
+            If you would like to see more check out my <br> <a href="file:///F:/Personal%20projects/glowing%20text.html" target="click"  class="skew github__link_btn"> SeeMore → </a></p>
+        </div>
+
+</section>
+
+<section class="some__memories">
+
+    <div class="center-text">
+        <h1 class="some__creativity_text margin_bt__4re skew">My Some Creativity</h1>
+    </div>
+
+    <div class="pictures_grid">
+
+       <div class="pictures__items">  
+            <img src="pics/1.jpg">
+        </div>
+       <div class="pictures__items">    
+            <img src="pics/2.jpg">
+       </div>
+
+       <div class="pictures__items">  
+             <img src="pics/3.jpg">
+        </div>
+       <div class="pictures__items">   
+            <img src="pics/4.jpg">
+        </div>
+        <div class="pictures__items">   
+                <img src="pics/5.jpg">
+         </div>
+             
+    </div>
+
+    <div class="center-text">
+        <a href="file:///F:/Personal%20projects/404errorpage1.html" class="more__pictures_btn skew">More → </a>
+    </div>
+
+
+</section>
+
+<footer>
+   
+    <div class="center-text">
+        
+        <p class="copyright__text">Made With <i  style="color:#fc2e64;" class="fa fa-heart" aria-hidden="true"></i>  By <span style="display: inline-block;color:#fff" class="skew"> Mohd Abrar Shah </span></p>
+        <p class="copyright__text__1 small__margin">Managed By  → Mohd Abrar Shah </p>
+    </div>
+
+</footer>
+
+ <script src="js/script.js" type="text/javascript">
+
+window.onload = (event) => {
+        
+    var textWrapper = document.querySelector('.manofaction__name');
+    textWrapper.innerHTML = textWrapper.textContent.replace(/([^\x00-\x80]|\w)/g, "<span class='letter'>$&</span>");
+
+anime.timeline({loop: true})
+  .add({
+    targets: '.manofaction__name .letter',
+    scale: [4,1],
+    opacity: [0,1],
+    translateZ: 0,
+    easing: "easeOutExpo",
+    duration: 950,
+    delay: function(el, i) {
+      return 70*i;
+    }
+  }).add({
+    targets: '.manofaction__name',
+    opacity: 0,
+    duration: 1000,
+    easing: "easeOutExpo",
+    delay: 1000
+  });
+
+};
+</script>
+ <script src="https://kit.fontawesome.com/c0635490d1.js" crossorigin="anonymous"></script>
+ <script type="text/javascript" src="https://platform.linkedin.com/badges/js/profile.js" async defer></script>
+
+</body>
+</html>
